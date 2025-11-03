@@ -35,6 +35,7 @@ The code has been tested on standard hardware with 16\,GB of RAM, 8 cores, and 5
 .
 mix_adversary
 ├── Algorithms.py                                 # This .py file contains a comprehensive set of functions for analyzing the paper.
+│── Artifact_Appendix.pdf                         # Artifact_Appendix.
 ├── Clients.py                                    # Simulates clients.
 ├── Main_Functions.py                             # DPMIX.py contains a comprehensive set of functions for analyzing DP-Mix.
 ├── main.py                                       # This file provides instructions regarding how to run the experiments described
