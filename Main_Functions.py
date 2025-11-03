@@ -20,16 +20,47 @@ def all_subsets(L):
     nums = list(range(1, L + 1))
     return list(chain.from_iterable(combinations(nums, r) for r in range(len(nums) + 1)))  
 
-def To_list(List):
-    if type(List) == list:
-        return List
-    List_ = List.tolist()
-    if len(List_)==1:
-        output = List_[0]
+def To_list(data):
+    """
+    Converts NumPy arrays or matrices to a regular Python list.
+    Handles scalars, 1D/2D arrays, and nested lists gracefully.
+    """
+    if isinstance(data, list):
+        return data
+    elif isinstance(data, np.ndarray):
+        return data.tolist()
+    elif hasattr(data, 'tolist'):  # covers np.matrix and similar types
+        return data.tolist()
     else:
-        output = List_
-    return output
+        return [data]  # fallback for scalar or unexpected type
+def build_data_dict(x, y, F0, F1):
+    """
+    Builds the data dictionary safely handling irregular arrays or lists.
+    
+    Parameters:
+        x, y: Input scalar or list data
+        F0, F1: Arrays, lists, or matrices of possibly irregular shape
 
+    Returns:
+        dict: with keys 'A_H_m', 'A_H_s', 'H_m', 'H_s'
+    """
+    # Convert to numpy arrays with object dtype to avoid shape errors
+    F0_arr = np.array(F0, dtype=object)
+    F1_arr = np.array(F1, dtype=object)
+
+    # Transpose if 2D or higher
+    F0_t = F0_arr.T if F0_arr.ndim >= 2 else F0_arr
+    F1_t = F1_arr.T if F1_arr.ndim >= 2 else F1_arr
+
+    # Construct dictionary
+    data0 = {
+        'A_H_m': x,
+        'A_H_s': y,
+        'H_m': To_list(F0_t),
+        'H_s': To_list(F1_t)
+    }
+
+    return data0
 class EXP_Mix(object):
     
     def __init__(self, Input):
@@ -818,7 +849,7 @@ class EXP_Mix(object):
             
             F0.append(Term)
             F1.append(Term0)
-        data0 =  {'A_H_m':x,'A_H_s':y,'H_m':To_list(np.transpose(np.matrix(F0))),'H_s': To_list(np.transpose(np.matrix(F1)))}
+        data0 =  build_data_dict(x, y, F0, F1)
 
         Name1 = 'Fig_9_a.png'
         Name2 = "Fig_8_a.png"
@@ -883,8 +914,7 @@ class EXP_Mix(object):
             
             F0.append(Term)
             F1.append(Term0)
-        data0 =  {'A_H_m':x,'A_H_s':y,'H_m':To_list(np.transpose(np.matrix(F0))),'H_s': To_list(np.transpose(np.matrix(F1)))}
-                           
+        data0 =  build_data_dict(x, y, F0, F1)
               
     
 
@@ -946,9 +976,8 @@ class EXP_Mix(object):
             
             F0.append(Term)
             F1.append(Term0)
-        data0 =  {'A_H_m':x,'A_H_s':y,'H_m':To_list(np.transpose(np.matrix(F0))),'H_s': To_list(np.transpose(np.matrix(F1)))}
                            
-
+        data0 =  build_data_dict(x, y, F0, F1)
         Y_C = []
         for i in [0,7,1,4]:
         
@@ -1045,8 +1074,7 @@ class EXP_Mix(object):
             F0.append(Term)
             F1.append(Term0)
             
-        data0 =  {'A_H_m':x,'A_H_s':y,'H_m':To_list(np.transpose(np.matrix(F0))),'H_s': To_list(np.transpose(np.matrix(F1)))}
-
+        data0 =  build_data_dict(x, y, F0, F1)
         Y_A = []
         for i in [0,3,5,6,7]:
         
@@ -1102,9 +1130,7 @@ class EXP_Mix(object):
             
             F0.append(Term)
             F1.append(Term0)
-            
-        data0 =  {'A_H_m':x,'A_H_s':y,'H_m':To_list(np.transpose(np.matrix(F0))),'H_s': To_list(np.transpose(np.matrix(F1)))}
-
+        data0 =  build_data_dict(x, y, F0, F1)
         Y_B = []
         for i in [0,3,5,6,7]:
         
@@ -1158,9 +1184,7 @@ class EXP_Mix(object):
             
             F0.append(Term)
             F1.append(Term0)
-            
-        data0 =  {'A_H_m':x,'A_H_s':y,'H_m':To_list(np.transpose(np.matrix(F0))),'H_s': To_list(np.transpose(np.matrix(F1)))}
-
+        data0 =  build_data_dict(x, y, F0, F1)
         Y_C = []
         for i in [0,3,5,6,7]:
         
@@ -1255,7 +1279,7 @@ class EXP_Mix(object):
             F0.append(Term)
             F1.append(Term0)
 
-        data0 =  {'A_H_m':x,'A_H_s':y,'H_m':To_list(np.transpose(np.matrix(F0))),'H_s': To_list(np.transpose(np.matrix(F1)))}
+        data0 =  build_data_dict(x, y, F0, F1)
         Y_A = []
         for i in [0,3,5,6,7]:
         
@@ -1308,7 +1332,7 @@ class EXP_Mix(object):
             F0.append(Term)
             F1.append(Term0)
 
-        data0 =  {'A_H_m':x,'A_H_s':y,'H_m':To_list(np.transpose(np.matrix(F0))),'H_s': To_list(np.transpose(np.matrix(F1)))}
+        data0 =  build_data_dict(x, y, F0, F1)
         Y_B = []
         for i in [0,3,5,6,7]:
         
@@ -1365,7 +1389,7 @@ class EXP_Mix(object):
             
             F0.append(Term)
             F1.append(Term0)
-        data0 =  {'A_H_m':x,'A_H_s':y,'H_m':To_list(np.transpose(np.matrix(F0))),'H_s': To_list(np.transpose(np.matrix(F1)))}
+        data0 =  build_data_dict(x, y, F0, F1)
         
         Y_C = []
         for i in [0,3,5,6,7]:
@@ -1460,7 +1484,7 @@ class EXP_Mix(object):
             F0.append(Term)
             F1.append(Term0)
             
-        data0 =  {'A_H_m':x,'A_H_s':y,'H_m':To_list(np.transpose(np.matrix(F0))),'H_s': To_list(np.transpose(np.matrix(F1)))}
+        data0 =  build_data_dict(x, y, F0, F1)
         Y_A = []
         for i in [0,2,4,6]:
         
@@ -1505,7 +1529,7 @@ class EXP_Mix(object):
             F0.append(Term)
             F1.append(Term0)
 
-        data0 =  {'A_H_m':x,'A_H_s':y,'H_m':To_list(np.transpose(np.matrix(F0))),'H_s': To_list(np.transpose(np.matrix(F1)))}
+        data0 =  build_data_dict(x, y, F0, F1)
         Y_B = []
         for i in [0,2,4,6]:
         
@@ -1551,7 +1575,7 @@ class EXP_Mix(object):
             F0.append(Term)
             F1.append(Term0)
 
-        data0 =  {'A_H_m':x,'A_H_s':y,'H_m':To_list(np.transpose(np.matrix(F0))),'H_s': To_list(np.transpose(np.matrix(F1)))}
+        data0 =  build_data_dict(x, y, F0, F1)
 
 
         Y_C = []
@@ -1619,7 +1643,7 @@ class EXP_Mix(object):
             
             F0.append(Term)
             F1.append(Term0)
-        data0 =  {'A_H_m':x,'A_H_s':y,'H_m':To_list(np.transpose(np.matrix(F0))),'H_s': To_list(np.transpose(np.matrix(F1)))}
+        data0 =  build_data_dict(x, y, F0, F1)
                 
 
         Y_A = []
@@ -1665,7 +1689,7 @@ class EXP_Mix(object):
                 
             F0.append(Term)
             F1.append(Term0)
-        data0 =  {'A_H_m':x,'A_H_s':y,'H_m':To_list(np.transpose(np.matrix(F0))),'H_s': To_list(np.transpose(np.matrix(F1)))}
+        data0 =  build_data_dict(x, y, F0, F1)
 
         Y_B = []
         for i in [0,2,4,6]:
@@ -1709,7 +1733,7 @@ class EXP_Mix(object):
                 Term0 += E_0[It][j]
             F0.append(Term)
             F1.append(Term0)
-        data0 =  {'A_H_m':x,'A_H_s':y,'H_m':To_list(np.transpose(np.matrix(F0))),'H_s': To_list(np.transpose(np.matrix(F1)))}
+        data0 =  build_data_dict(x, y, F0, F1)
 
         Y_C = []
         for i in [0,2,4,6]:
@@ -1781,7 +1805,7 @@ class EXP_Mix(object):
             F1.append(Term0)
             
         
-        data0 =  {'A_H_m':x,'A_H_s':y,'H_m':To_list(np.transpose(np.matrix(F0))),'H_s': To_list(np.transpose(np.matrix(F1)))}
+        data0 =  build_data_dict(x, y, F0, F1)
         Y_A = []
         for i in [0,2,4,6]:
         
@@ -1826,7 +1850,7 @@ class EXP_Mix(object):
             F0.append(Term)
             F1.append(Term0)
         
-        data0 =  {'A_H_m':x,'A_H_s':y,'H_m':To_list(np.transpose(np.matrix(F0))),'H_s': To_list(np.transpose(np.matrix(F1)))}                        
+        data0 =  build_data_dict(x, y, F0, F1)                       
         Y_B = []
         for i in [0,2,4,6]:
         
@@ -1871,7 +1895,7 @@ class EXP_Mix(object):
             F0.append(Term)
             F1.append(Term0)
             
-        data0 =  {'A_H_m':x,'A_H_s':y,'H_m':To_list(np.transpose(np.matrix(F0))),'H_s': To_list(np.transpose(np.matrix(F1)))}                   
+        data0 =  build_data_dict(x, y, F0, F1)                  
         Y_C = []
         for i in [0,2,4,6]:
         
@@ -1939,7 +1963,7 @@ class EXP_Mix(object):
             F0.append(Term)
             F1.append(Term0)
 
-        data0 =  {'A_H_m':x,'A_H_s':y,'H_m':To_list(np.transpose(np.matrix(F0))),'H_s': To_list(np.transpose(np.matrix(F1)))}
+        data0 =  build_data_dict(x, y, F0, F1)
         
                 
         Y_A = []
@@ -2018,7 +2042,7 @@ class EXP_Mix(object):
             F0.append(Term)
             F1.append(Term0)
 
-        data0 =  {'A_H_m':x,'A_H_s':y,'H_m':To_list(np.transpose(np.matrix(F0))),'H_s': To_list(np.transpose(np.matrix(F1)))}
+        data0 =  build_data_dict(x, y, F0, F1)
         
         Y_B = []
         for i in [1,3,5,7]:
@@ -2095,7 +2119,7 @@ class EXP_Mix(object):
             F0.append(Term)
             F1.append(Term0)
             
-        data0 =  {'A_H_m':x,'A_H_s':y,'H_m':To_list(np.transpose(np.matrix(F0))),'H_s': To_list(np.transpose(np.matrix(F1)))}  
+        data0 =  build_data_dict(x, y, F0, F1) 
         
         Y_C = []
         for i in [1,3,5,7]:
