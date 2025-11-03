@@ -33,25 +33,23 @@ The code has been tested on standard hardware with 16\,GB of RAM, 8 cores, and 5
 
 ```text
 .
-artifact
-├── dataset.pkl                                   # Dataset used in DP-Mix (including NYM and RIPE data)
-├── DPMIX_Functions.py                            # This .py file includes all the functions needed to directly run the main
-│                                                   experiments of DP-Mix  and generates the corresponding figures.
-├── DPMIX.py                                      # DPMIX.py contains a comprehensive set of functions for analyzing DP-Mix.
-├── FCP_Functions.py                              # This .py file includes strategies that a mixnode adversary might consider
-│                                                    when corrupting mindnodes in mixnets.
-├── Main.py                                       # This file provides instructions regarding how to run the experiments described
-│                                                    in the main body of the paper.
+mix_adversary
+├── Algorithms.py                                 # This .py file contains a comprehensive set of functions for analyzing the paper.
+├── Clients.py                                    # Simulates clients.
+├── Main_Functions.py                             # DPMIX.py contains a comprehensive set of functions for analyzing DP-Mix.
+├── main.py                                       # This file provides instructions regarding how to run the experiments described
+│                                                 # in the main body of the paper.
 ├── Message_Genartion_and_mix_net_processing_.py  # This Python file, on behalf of clients, generates the messages to be sent
-│                                                    to the mixnet.
+│                                                 # to the mixnet.
 ├── Message_.py                                   # Simulates the messages generated and sent by the clients.
 ├── Mix_Node_.py                                  # Simulates using discrete event simulation, a mixnode in mixnets.
-├── NYM.py                                        # This .py file provides the main simulation components necessary to simulate
-│                                                     a mixnet as used in DP-Mix.
+├── NYM.py                                        # This .py file provides the main simulation components necessary
+│                                                 # to simulate the NYM mixnet.
 ├── PLOTTER.py                                    # To plot the figures.
-├── Routing.py                                    # This function helps to model the routing approaches in DP-Mix.
-└── Sim.py                                        # This .py file also includes the necessary simulation components
-                                                    for reproducing simulations of DP-Mix.
+├── Routing.py                                    # This function helps to model the routing approaches.
+│   Sim.py                                        # This .py file also includes the necessary simulation components                       
+└──                                               # for reproducing simulations.                                 
+                                                  
 
 Claims
 ├── Claim1
