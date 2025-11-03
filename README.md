@@ -141,24 +141,39 @@ You may compare the generated figures with Figure 5 in the paper (shown below). 
 
 ## Additional Notes
 
-- This artifact has been created to reproduce the results presented in the paper “DP-Mix: Differentially Private Routing in Mix Networks”, accepted for publication at ACSAC 2025, and to provide an environment that makes the code usable for future research. You can execute the code on any standard laptop or workstation running Ubuntu 18.04 or higher. It is compatible with Python 3.8.10. Alternatively, the repository can be cloned and executed in a Google Colab environment.  
+- This artifact has been prepared to reproduce the results presented in the paper *“When Mixnets Fail: Evaluating, Quantifying, and Mitigating the Impact of Adversarial Nodes in Mix Networks”*, which has been accepted (subject to minor revision) for publication at **NDSS 2026**. It also provides a self-contained environment designed to support reproducibility and facilitate future research.
 
-- Importantly, the artifact includes precisely the same configurations and settings used in the original DP-Mix evaluation. The only exception is that the number of iterations and some minor parameters have been scaled down to ensure feasibility on standard hardware. These configuration parameters can be reviewed and, where appropriate, modified in the initialization of `DP_Mix_Functions.py`. This adjustment ensures that the artifact remains practical for local execution, while still supporting future extensions where researchers may wish to adapt our approach to scenarios not explicitly tested in DP-Mix.  
+The code can be executed on any standard laptop or workstation running **Ubuntu 18.04 or later**, and is compatible with **Python 3.8.10**. Alternatively, the repository can be cloned and run directly in a **Google Colab** environment.
 
-- That said, modifying parameters requires a deeper understanding of mixnets. Mixnets are complex systems in which changes to a single parameter may influence others. In many cases, certain parameter combinations may be incompatible or may significantly affect the overall results. Additionally, several parameters are initialized based on prior work, and their default values were chosen to support meaningful comparisons. As such, arbitrary modifications may not yield valid outcomes.  
+---
 
-- However, the following parameters in the initialization of `DP_Mix_Functions.py` can be safely modified within specific intervals:  
+### Configuration and Parameters
 
-1- `self.Iterations`: can be increased up to 30 to improve accuracy; note that this change increases computational cost exponentially.
-  
-2- `self.num_targets`: specifies the number of target messages in the simulations; can be set to any integer in [20,200].  
+This artifact includes the exact configurations and settings used in the original paper’s evaluation. The only differences are minor reductions in the number of iterations and a few parameters to ensure practical execution on standard hardware. All configuration parameters can be reviewed—and, where appropriate, modified—within the initialization section of `Main_Functions.py`. These adjustments preserve feasibility for local runs while maintaining flexibility for extended research or alternative experimental setups.
 
-3- `self.run`: defines the duration of each simulation time slot; can be set to any real value in [0.05,1.0]. 
- 
-4- `self.delay1`: represents the average delay imposed on each message upon entering mixnodes; can be set to any real value in [0.01,0.08]. 
- 
+> **Note:** Modifying parameters requires a solid understanding of mixnet behavior. Mix networks are interdependent systems in which small parameter changes may impact overall performance or validity. Some parameters are derived from prior work to ensure consistency across experiments, so arbitrary modifications may lead to inconsistent or invalid outcomes.
 
-- Other parameters should not be modified, as they are tied to fixed design assumptions in mixnets. Altering them may lead to execution errors or invalid experimental results. If users wish to modify such parameters, we recommend contacting the authors directly for further guidance. 
+---
+
+### Safely Adjustable Parameters in `Main_Functions.py`
+
+1. **`self.Iterations`** — Controls the number of simulation iterations.
+   *Can be increased up to 30 to improve accuracy, but computational cost grows exponentially.*
+
+2. **`self.num_targets`** — Defines the number of target messages in the simulation.
+   *Acceptable range: any integer between [20, 200].*
+
+3. **`self.run`** — Specifies the duration of each simulation time slot.
+   *Acceptable range: any real value between [0.3, 1.0].*
+
+4. **`self.delay1`** — Represents the average delay imposed on each message upon entering the mixnodes.
+   *Acceptable range: any real value between [0.01, 0.08].*
+
+---
+
+### Important Note
+
+Other parameters should **not** be modified, as they are tied to fixed design assumptions of mix networks. Changing them may cause runtime errors or invalidate experimental outcomes. Researchers wishing to explore modifications beyond these safe ranges are encouraged to **contact the authors** for further guidance.
 
 
  
