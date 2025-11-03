@@ -83,97 +83,46 @@ mix_adversary
 - To run this experiment, first execute the following command: `python3 main.py`
 - Then enter `100` as the experiment ID when prompted.
   
-  - Upon completion, the results will be saved as Fig_3_a.png, Fig_3_b.png, and Fig_3_c.png in the `mix_adversary/Figures/` directory.
+- Upon completion, the results will be saved as Fig_3_a.png, Fig_3_b.png, and Fig_3_c.png in the `mix_adversary/Figures/` directory.
 - Verification:
 
 You may compare the generated figures with Figure 3 in the paper (shown below). Note that due to execution constraints (e.g., reduced number of iterations for personal machines or Google Colab), the reproduced figures may not match the paper exactly. For verification purposes, focus on the consistency of the observed trends—particularly whether the values increase or decrease as expected along the x-axis.
 
-
-
-<img width="994" height="243" alt="image" src="https://github.com/user-attachments/assets/4b25f0a0-18a6-4247-ba44-fc0fd45a1515" />
-
-
-
-
-## E2: [Reproducing Fig. 6; verifying Claim C2] [10 min]  
-
-- To run this experiment, it is important to first change the directory to `./Claims/Claim2/`. You can then reproduce this experiment by running:  
-
-`bash ./run_E_2.sh`  
-
-- After execution, the results will be saved as **Fig_6a.png**, **Fig_6b.png**, **Fig_6c.png**, and **Fig_6d.png** in the `artifact/Figures/` directory.  
-
-- Verification:  
-You can compare the results with Figure 6 in the paper (shown below). Please note, however, that the experiment may not reproduce exactly the same figures due to adjustments made for execution on a personal laptop or Google Colab (e.g., fewer iterations or modified parameters). For verification, focus on the claim itself, particularly the observed trends—increasing or decreasing values along the x-axis.  
-
-Alternatively, the pre-generated figures provided in `./Claims/Claim2/expected/` offer a more reliable point of comparison, as they were produced using the current artifact with a reduced number of iterations, yielding outputs more consistent with those obtained when running the artifact.
-
-<img width="1437" height="267" alt="image" src="https://github.com/user-attachments/assets/f6a174e3-92c4-436c-a6de-36e09235d751" />
+<img width="1085" height="257" alt="image" src="https://github.com/user-attachments/assets/8ca2e6e0-99a6-4c1b-881a-333a5bb12683" />
 
 
 
 
+## E2: [Reproducing Fig. 4; verifying Claim C2] [40 min]  
 
+- To run this experiment, first execute the following command: `python3 main.py`
+- Then enter `200` as the experiment ID when prompted.
+  
+- Upon completion, the results will be saved as Fig_4_a.png, Fig_4_b.png, and Fig_4_c.png in the `mix_adversary/Figures/` directory.
+- Verification:
 
-## E3: [Reproducing Fig. 7; verifying Claim C3] [20 min]  
-
-- To run this experiment, it is important to first change the directory to `./Claims/Claim3/`. You can then reproduce this experiment by running:  
-
-`bash ./run_E_3.sh`  
-
-- After execution, the results will be saved as **Fig_7a.png**, **Fig_7b.png**, **Fig_7c.png**, and **Fig_7d.png** in the `artifact/Figures/` directory.  
-
-- Verification:  
-You can compare the results with Figure 7 in the paper (shown below). Please note, however, that the experiment may not reproduce exactly the same figures due to adjustments made for execution on a personal laptop or Google Colab (e.g., fewer iterations or modified parameters). For verification, focus on the claim itself, particularly the observed trends—increasing or decreasing values along the x-axis.  
-
-Alternatively, the pre-generated figures provided in `./Claims/Claim3/expected/` offer a more reliable point of comparison, as they were produced using the current artifact with a reduced number of iterations, yielding outputs more consistent with those obtained when running the artifact.
+You may compare the generated figures with Figure 4 in the paper (shown below). Note that due to execution constraints (e.g., reduced number of iterations for personal machines or Google Colab), the reproduced figures may not match the paper exactly. For verification purposes, focus on the consistency of the observed trends—particularly whether the values increase or decrease as expected along the x-axis.
 
 
 
+<img width="1284" height="312" alt="image" src="https://github.com/user-attachments/assets/c5607033-a488-4170-9a75-60e596cab6ea" />
 
 
-<img width="1429" height="249" alt="image" src="https://github.com/user-attachments/assets/4d08e2f0-6f1e-4cf0-ad5d-7e0c76d15a0a" />
 
+## E3: [Reproducing Fig. 5; verifying Claim C3] [15 min]  
 
-## E4: [Reproducing Fig. 8; verifying Claim C4] [15 min]  
+- To run this experiment, first execute the following command: `python3 main.py`
+- Then enter `300` as the experiment ID when prompted.
+  
+- Upon completion, the results will be saved as Fig_5_a.png, Fig_5_b.png, and Fig_5_c.png in the `mix_adversary/Figures/` directory.
+- Verification:
 
-- To run this experiment, it is important to first change the directory to `./Claims/Claim4/`. You can then reproduce this experiment by running:  
-
-`bash ./run_E_4.sh`  
-
-- After execution, the results will be saved as **Fig_8a.png**, **Fig_8b.png**, **Fig_8c.png**, and **Fig_8d.png** in the `artifact/Figures/` directory.  
-
-- Verification:  
-You can compare the results with Figure 8 in the paper (shown below). Please note, however, that the experiment may not reproduce exactly the same figures due to adjustments made for execution on a personal laptop or Google Colab (e.g., fewer iterations or modified parameters). For verification, focus on the claim itself, particularly the observed trends—increasing or decreasing values along the x-axis.  
-
-Alternatively, the pre-generated figures provided in `./Claims/Claim4/expected/` offer a more reliable point of comparison, as they were produced using the current artifact with a reduced number of iterations, yielding outputs more consistent with those obtained when running the artifact.
-
-
-<img width="1368" height="256" alt="image" src="https://github.com/user-attachments/assets/c504f2ac-6a33-438c-8cad-a0d55a1c7d32" />
+You may compare the generated figures with Figure 5 in the paper (shown below). Note that due to execution constraints (e.g., reduced number of iterations for personal machines or Google Colab), the reproduced figures may not match the paper exactly. For verification purposes, focus on the consistency of the observed trends—particularly whether the values increase or decrease as expected along the x-axis.
 
 
 
 
-
-## E5: [Reproducing Fig. 9; verifying Claim C5] [15 min]  
-
-- To run this experiment, it is important to first change the directory to `./Claims/Claim5/`. You can then reproduce this experiment by running:  
-
-`bash ./run_E_5.sh`  
-
-- After execution, the results will be saved as **Fig_9a.png**, **Fig_9b.png**, **Fig_9c.png**, and **Fig_9d.png** in the `artifact/Figures/` directory.  
-
-- Verification:  
-You can compare the results with Figure 9 in the paper (shown below). Please note, however, that the experiment may not reproduce exactly the same figures due to adjustments made for execution on a personal laptop or Google Colab (e.g., fewer iterations or modified parameters). For verification, focus on the claim itself, particularly the observed trends—increasing or decreasing values along the x-axis.  
-
-Alternatively, the pre-generated figures provided in `./Claims/Claim5/expected/` offer a more reliable point of comparison, as they were produced using the current artifact with a reduced number of iterations, yielding outputs more consistent with those obtained when running the artifact.
-
-
-
-<img width="1412" height="274" alt="image" src="https://github.com/user-attachments/assets/dd04e486-16a7-4290-99ba-b77ded2c4cd6" />
-
-
-
+<img width="1177" height="274" alt="image" src="https://github.com/user-attachments/assets/25ff6044-c22e-4eea-b64b-398f338662ff" />
 
 ## E*: [Table 1] [20 min]  
 
