@@ -63,9 +63,10 @@ mix_adversary
 
 - **(C1):** The first claim concerns the trend illustrated in Figure 3. Across all settings and scenarios, we observe that as the parameters vary—specifically, increasing the size of $S_h$ (Figure 3a), decreasing $K$ (Figure 3b), and increasing $\alpha$ (Figure 3c)—the values of $H_D$ and $\mathbb{P}(D)$ on the Y-axis consistently decrease, while $\mathbb{P}(R)$ increases. This claim is substantiated by Experiment E1, which generates Figure 3 and clearly demonstrates this trend.
 
-- **(C2):**  This claim concerns the trend shown in Figure 6. Across all settings and scenarios, when the variable on the x-axis (the privacy parameter \( \varepsilon \)) increases, the corresponding entropy decreases. This claim is supported by Experiment E2, which generates Figure 6 and demonstrates this trend. See `./Claims/Claim2/claim.txt` for more details.  
+- **(C2):** The second claim concerns the trend illustrated in Figure 4. Across all settings and scenarios, we observe that as the parameters vary—specifically, increasing the size of $S_h$ (Figure 4a), decreasing $K$ (Figure 4b), and increasing $\alpha$ (Figure 4c)—the values of DLM on the Y-axis consistently decrease. This claim is supported by Experiment E2, which produces Figure 4 and clearly demonstrates this trend.
 
-- **(C3):**  This claim concerns the trend shown in Figure 7. Across all settings and scenarios, when the variable on the x-axis (the privacy parameter \( \varepsilon \)) increases, the entropy of messages shown on the y-axis decreases. This claim is supported by Experiment E3, which generates Figure 7 and demonstrates this trend. See `./Claims/Claim3/claim.txt` for more details.  
+- **(C3):** The third claim concerns the trend illustrated in Figure 5. Across all settings and scenarios, we observe that as the parameters vary—specifically, increasing the size of $S_h$ (Figure 5a), decreasing $K$ (Figure 5b), and increasing $\alpha$ (Figure 5c)—the values of CAM on the Y-axis consistently decrease. This claim is supported by Experiment E3, which produces Figure 5 and clearly demonstrates this trend.
+
 
 
 
