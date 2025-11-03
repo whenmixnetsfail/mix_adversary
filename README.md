@@ -49,66 +49,7 @@ mix_adversary
 ├── Routing.py                                    # This function helps to model the routing approaches.
 │   Sim.py                                        # This .py file also includes the necessary simulation components                       
 └──                                               # for reproducing simulations.                                 
-                                                  
-
-Claims
-├── Claim1
-│   ├── claim.txt            # Text description of Claim 1
-│   ├── expected             # Expected results/figures for Claim 1
-│   │   ├── Fig_5a.png       # Expected figure 5a
-│   │   ├── Fig_5b.png       # Expected figure 5b
-│   │   ├── Fig_5c.png       # Expected figure 5c
-│   │   └── Fig_5d.png       # Expected figure 5d
-│   └── run_E_1.sh           # Script to run experiment for Claim 1
-│
-├── Claim2
-│   ├── claim.txt            # Text description of Claim 2
-│   ├── expected             # Expected results/figures for Claim 2
-│   │   ├── Fig_6a.png
-│   │   ├── Fig_6b.png
-│   │   ├── Fig_6c.png
-│   │   └── Fig_6d.png
-│   └── run_E_2.sh           # Script to run experiment for Claim 2
-│
-├── Claim3
-│   ├── claim.txt            # Text description of Claim 3
-│   ├── expected             # Expected results/figures for Claim 3
-│   │   ├── Fig_7a.png
-│   │   ├── Fig_7b.png
-│   │   ├── Fig_7c.png
-│   │   └── Fig_7d.png
-│   └── run_E_3.sh           # Script to run experiment for Claim 3
-│
-├── Claim4
-│   ├── claim.txt            # Text description of Claim 4
-│   ├── expected             # Expected results/figures for Claim 4
-│   │   ├── Fig_8a.png
-│   │   ├── Fig_8b.png
-│   │   ├── Fig_8c.png
-│   │   └── Fig_8d.png
-│   └── run_E_4.sh           # Script to run experiment for Claim 4
-│
-├── Claim5
-│   ├── claim.txt            # Text description of Claim 5
-│   ├── expected             # Expected results/figures for Claim 5
-│   │   ├── Fig_9a.png
-│   │   ├── Fig_9b.png
-│   │   ├── Fig_9c.png
-│   │   └── Fig_9d.png
-│   └── run_E_5.sh           # Script to run experiment for Claim 5
-│
-├── Claim_T
-│   ├── claim.txt            # Text description of ruining experiments leading to generating Table 1 
-│   └── run_E_T.sh           # Script to run Table 1 experiment
-│
-├── install.sh               # Installation script for environment setup
-├── LICENSE                  # License information  
-├── README.md                # Project overview & instructions
-├── requirements.txt         # Provides the required argument used by install.sh for installing the dependencies at
-│                              the beginning of running the artifact.
-└── use.txt	                 # Intended use + limitations
-
-
+ 
 ```
 
 
