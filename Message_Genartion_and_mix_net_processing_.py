@@ -7,7 +7,7 @@ import numpy as np
 from scipy.stats import expon
 from Message_ import message
 from Clients import Client
-from main_fun import CirMixNet
+from Algorithms import CirMixNet
 
 
 class Message_Genartion_and_mix_net_processing(object):
