@@ -1,6 +1,6 @@
 # When Mixnets Fail
 
-This repository contains the artifact for the paper titled "DP-Mix: Differentially Private Routing in Mix Networks," accepted for publication at ACSAC 2025.
+This repository contains the artifact for the paper titled “When Mixnets Fail: Evaluating, Quantifying, and Mitigating the Impact of Adversarial Nodes in Mix Networks,” which has been accepted—subject to minor revision—at NDSS 2026.
 
 ## Initial setup and dependencies
 You can execute the code on any standard laptop or workstation running Ubuntu 18.04 or higher. It is compatible with Python 3.8.10. Importantly, the artifact uses the same configuration as in the paper but with a reduced number of iterations, making it suitable for faster execution so that it can be readily run on a personal laptop or public infrastructure such as Google Colab.
@@ -21,7 +21,7 @@ All required dependencies for execution are listed in the `requirements.txt` fil
 
 However, to install all requirements automatically, you only need to run the following command once from the command line or within Google Colab before executing the project:  
 
-`bash install.sh`
+`pip install -r requirements.txt`
 
 ## Hardware Requirements
 The code has been tested on standard hardware with 16\,GB of RAM, 8 cores, and 50\,GB of available disk space. Alternatively, the artifact can be executed on Google Colab. To do so, you will need a Google account. Once signed in, you can clone the Git repository and run the code for free by following the instructions provided below.
