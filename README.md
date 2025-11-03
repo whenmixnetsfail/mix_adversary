@@ -1,4 +1,4 @@
-# DP-Mix
+# When Mixnets Fail
 
 This repository contains the artifact for the paper titled "DP-Mix: Differentially Private Routing in Mix Networks," accepted for publication at ACSAC 2025.
 
