@@ -61,7 +61,7 @@ mix_adversary
 
 ## Major Claims
 
-- **(C1):** The first claim concerns the trend illustrated in Figure~3. Across all settings and scenarios, we observe that as the parameters vary—specifically, increasing the size of $S_h$ (Figure~3a), decreasing $K$ (Figure~3b), and increasing $\alpha$ (Figure~3c)—the values of $H_D$ and $\mathbb{P}(D)$ on the Y-axis consistently decrease, while $\mathbb{P}(R)$ increases. This claim is substantiated by Experiment~E1, which generates Figure~3 and clearly demonstrates this trend.
+- **(C1):** The first claim concerns the trend illustrated in Figure 3. Across all settings and scenarios, we observe that as the parameters vary—specifically, increasing the size of $S_h$ (Figure 3a), decreasing $K$ (Figure 3b), and increasing $\alpha$ (Figure 3c)—the values of $H_D$ and $\mathbb{P}(D)$ on the Y-axis consistently decrease, while $\mathbb{P}(R)$ increases. This claim is substantiated by Experiment E1, which generates Figure 3 and clearly demonstrates this trend.
 
 - **(C2):**  This claim concerns the trend shown in Figure 6. Across all settings and scenarios, when the variable on the x-axis (the privacy parameter \( \varepsilon \)) increases, the corresponding entropy decreases. This claim is supported by Experiment E2, which generates Figure 6 and demonstrates this trend. See `./Claims/Claim2/claim.txt` for more details.  
 
