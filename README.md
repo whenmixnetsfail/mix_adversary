@@ -78,21 +78,20 @@ mix_adversary
 
 ## Experiments
 
-## E1: [Reproducing Fig. 5; verifying Claim C1] [10 min]  
+## E1: [Reproducing Fig. 3; verifying Claim C1] [5 min]  
 
-- To run this experiment, it is important to first change the directory to `./Claims/Claim1/`. You can then reproduce this experiment by running:  
+- To run this experiment, first execute the following command: `python3 main.py`
+- Then enter `100` as the experiment ID when prompted.
+  
+  - Upon completion, the results will be saved as Fig_3_a.png, Fig_3_b.png, and Fig_3_c.png in the `mix_adversary/Figures/` directory.
+- Verification:
 
-`bash ./run_E_1.sh`  
-
-- After execution, the results will be saved as **Fig_5a.png**, **Fig_5b.png**, **Fig_5c.png**, and **Fig_5d.png** in the `artifact/Figures/` directory.  
-
-- Verification:  
-You can compare the results with Figure 5 in the paper (shown below). Please note, however, that the experiment may not reproduce exactly the same figures due to adjustments made for execution on a personal laptop or Google Colab (e.g., fewer iterations or modified parameters). For verification, focus on the claim itself, particularly the observed trends—increasing or decreasing values along the x-axis.  
-
-Alternatively, the pre-generated figures provided in `./Claims/Claim1/expected/` offer a more reliable point of comparison, as they were produced using the current artifact with a reduced number of iterations, yielding outputs more consistent with those obtained when running the artifact.
+You may compare the generated figures with Figure 3 in the paper (shown below). Note that due to execution constraints (e.g., reduced number of iterations for personal machines or Google Colab), the reproduced figures may not match the paper exactly. For verification purposes, focus on the consistency of the observed trends—particularly whether the values increase or decrease as expected along the x-axis.
 
 
-<img width="1419" height="280" alt="image" src="https://github.com/user-attachments/assets/816e5c31-cf2f-40f3-aded-ecf20d85926f" />
+
+<img width="994" height="243" alt="image" src="https://github.com/user-attachments/assets/4b25f0a0-18a6-4247-ba44-fc0fd45a1515" />
+
 
 
 
