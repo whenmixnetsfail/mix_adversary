@@ -37,7 +37,7 @@ mix_adversary
 ├── Algorithms.py                                 # This .py file contains a comprehensive set of functions for analyzing the paper.
 │── Artifact_Appendix.pdf                         # Artifact_Appendix.
 ├── Clients.py                                    # Simulates clients.
-├── Main_Functions.py                             # DPMIX.py contains a comprehensive set of functions for analyzing DP-Mix.
+├── Main_Functions.py                             # This .py file contains a comprehensive set of functions for analyzing the paper approaches.
 ├── main.py                                       # This file provides instructions regarding how to run the experiments described
 │                                                 # in the main body of the paper.
 ├── Message_Genartion_and_mix_net_processing_.py  # This Python file, on behalf of clients, generates the messages to be sent
