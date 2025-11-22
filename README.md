@@ -17,7 +17,8 @@ All required dependencies for execution are listed in the `requirements.txt` fil
 - pulp  
 - scipy  
 - simpy  
-- tabulate  
+- tabulate
+- geopy
 
 However, to install all requirements automatically, you only need to run the following command once from the command line or within Google Colab before executing the project:  
 
