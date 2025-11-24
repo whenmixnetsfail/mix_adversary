@@ -81,7 +81,7 @@ mix_adversary
 ## Experiments
 
 ## E1: [Reproducing Fig. 3; verifying Claim C1] [5 min]  
-- [Configuration Parameters]: The configuration parameters match those used in Fig.~3, specifically: \( L = 3 \), \( W = 300 \), \( \beta = 0.1 \), and \( m = 500 \) (corresponding to 1~MB of data).
+- [Configuration Parameters]: The configuration parameters match those used in Fig. 3, specifically: L = 3, W = 300, \beta = 0.1, and m = 500 (corresponding to 1 MB of data).
 - To run this experiment, first execute the following command: `python3 main.py`
 - Then enter `100` as the experiment ID when prompted.
   
@@ -96,6 +96,7 @@ You may compare the generated figures with Figure 3 in the paper (shown below). 
 
 
 ## E2: [Reproducing Fig. 4; verifying Claim C2] [40 min]  
+- [Configuration Parameters]: The configuration parameters match those used in Fig. 4, specifically: L = 3, W = 300, \beta = 0.1, and m = 500 (1 MB of data).
 
 - To run this experiment, first execute the following command: `python3 main.py`
 - Then enter `200` as the experiment ID when prompted.
@@ -112,6 +113,7 @@ You may compare the generated figures with Figure 4 in the paper (shown below). 
 
 
 ## E3: [Reproducing Fig. 5; verifying Claim C3] [15 min]  
+- [Configuration Parameters]: The configuration parameters match those used in Fig. 5, specifically: L = 3, W = 300, \beta = 0.1, and \mu = 30000 packets/s.
 
 - To run this experiment, first execute the following command: `python3 main.py`
 - Then enter `300` as the experiment ID when prompted.
