@@ -25,7 +25,7 @@ However, to install all requirements automatically, you only need to run the fol
 `pip install -r requirements.txt`
 
 
-If you are not using Python 3.8.10, you may encounter compatibility errors when running the artifact. In that case, please consider running:
+If you are not using Python 3.8.10, you may encounter compatibility errors. In that case, please consider running:
 
 `pip install -r requirements_.txt`
 
