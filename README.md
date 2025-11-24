@@ -24,6 +24,11 @@ However, to install all requirements automatically, you only need to run the fol
 
 `pip install -r requirements.txt`
 
+
+If you are not using Python 3.8.10, you may encounter compatibility errors when running the artifact. In that case, please install the required dependencies manually by executing:
+\begin{verbatim}
+`pip install -r requirements.txt`
+
 ## Hardware Requirements
 The code has been tested on standard hardware with 16\,GB of RAM, 8 cores, and 50\,GB of available disk space. Alternatively, the artifact can be executed on Google Colab. To do so, you will need a Google account. Once signed in, you can clone the Git repository and run the code for free by following the instructions provided below.
 
